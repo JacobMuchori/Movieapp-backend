@@ -4,8 +4,8 @@ default: &default
 
 development:
   <<: *default
-  database: db/todos-dev.sqlite3
+  database: db/movies-dev.sqlite3
 
 production:
   <<: *default
-  database: db/todos-prod.sqlite3
+  database: db/movies-prod.sqlite3
