@@ -25,6 +25,8 @@ GEM
     puma (6.1.1)
       nio4r (~> 2.0)
     rack (2.2.6.2)
+    rack-cors (2.0.0)
+      rack (>= 2.0.0)
     rack-protection (3.0.5)
       rack
     rake (13.0.6)
@@ -43,6 +45,7 @@ GEM
     sinatra-activerecord (2.0.26)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-cross_origin (0.4.0)
     sqlite3 (1.6.1-x86_64-linux)
     tilt (2.1.0)
     tzinfo (2.0.6)
@@ -54,11 +57,13 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 7.0, >= 7.0.4.2)
   puma (~> 6.1)
+  rack-cors (~> 2.0)
   rake (~> 13.0, >= 13.0.6)
   require_all (~> 3.0)
   rerun (~> 0.14.0)
   sinatra (~> 3.0, >= 3.0.5)
   sinatra-activerecord (~> 2.0, >= 2.0.26)
+  sinatra-cross_origin (~> 0.4.0)
   sqlite3 (~> 1.6, >= 1.6.1)
 
 BUNDLED WITH
