@@ -2,21 +2,21 @@ class MovieController < Sinatra::Base
 
     set :default_content_type, 'application/json'
     
-      configure do
-        enable :cross_origin
-      end
+    #   configure do
+    #     enable :cross_origin
+    #   end
     
-      before do
-        response.headers['Access-Control-Allow-Origin'] = '*'
-      end
+    #   before do
+    #     response.headers['Access-Control-Allow-Origin'] = '*'
+    #   end
     
-      options "*" do
-        response.headers["Allow"] = "GET, PUT, POST, DELETE"
-        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
-        response.headers["Access-Control-Allow-Origin"] = "*"
-        response.headers["Access-Control-Allow-Methods"] = "GET, PUT, POST, DELETE"
-        200
-      end
+    #   options "*" do
+    #     response.headers["Allow"] = "GET, PUT, POST, DELETE"
+    #     response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type, Accept, X-User-Email, X-Auth-Token"
+    #     response.headers["Access-Control-Allow-Origin"] = "*"
+    #     response.headers["Access-Control-Allow-Methods"] = "GET, PUT, POST, DELETE"
+    #     200
+    #   end
 
     get '/movies' do
         movies = Movie.all.order(year: :desc)
