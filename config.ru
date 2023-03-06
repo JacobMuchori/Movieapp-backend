@@ -1,4 +1,4 @@
-require_relative "./config/environment"
+require_relative "config/environment"
 
 use Rack::Cors do
   allow do
