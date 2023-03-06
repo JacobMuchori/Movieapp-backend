@@ -7,4 +7,4 @@ development:
 
 production:
   <<: *default
-  database: "db/movies-prod.sqlite3"
+  database: "db/movies-prod.sqlite3
